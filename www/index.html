@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       
+        <title>nm2207 final project</title>
+    </head>
+
+  <body style="background-color: lightgrey; padding:140px" id="top">
+
+    <header>
+        <br>
+        <div style="font-size: 80px; font-style: italic;">yvonne's final project</div>
+    </header>
+
+    <h2 style="letter-spacing: 65px">A0113791H</h2>
+
+    <div style="letter-spacing: 3px; padding: 50px">
+        <h2><a href="startPage.html">final project</a></h2>
+        <h2><a href="#linkhere">final write up</a></h2>
+        <h2><a href="#linkhere2">weekly logs</a></h2>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <div style="padding:100px">
+
+        <h2 id="linkhere" style="font-size: 40px;letter-spacing: 10px;">final write up</h2>
+        <p>For my project, I created a series of canvases, some of which animate on their own, while others will respond to the user’s on-screen activity.</p>
+
+        <p>I used the HTML5 way of adding audio, and wrote a function for some of them that I wanted to loop. I did this by adding an event listener on the audio object listening for the end of the track. In the callback function, I set it to play again.</p>
+
+        <p>I also initialized two functions at the beginning of my code. One of them was to calculate the distance between two points given their x and y positions. The other generates a random integer between specified boundaries. </p>
+
+        <p>I have 8 paper elements, each linked to a raphael paper canvas, with an alternating background colour of black and grey. In general, as most of my canvases respond to a type of user interaction, after creating my SVGs I added an invisible rectangle on top of each canvas to listen for mouse move, mouse over and mouse out events. I added a title to mark the start of my sequence.</p>
+        
+        <p>I added a quote by Virginia Woolf:</p>
+        <p style="padding-left: 35px; font-style: oblique;">“Let us record the atoms as they fall upon the mind in the order in which they fall, let us trace the pattern, however disconnected and incoherent in appearance, which each sight or incident scores upon the consciousness. Let us not take it for granted that life exists more fully in what is commonly thought big than in what is commonly thought small.”</p>
+
+        <p>Likewise, as with the ricochet of the atoms, the various stages of agitation in the human mind are exhibited in this installation. From the colorful implosion, clockwork movements, to a blatant rebel of the yes and no, the daily aggravations of one is reflected, as experienced in the everyday reality of life. The vehemence of the colors reflects the emotions one may feel, yet in its entirety, the installation works together as a work of art, bringing together different rebellions to create an interactive piece to appeal to the audience, yet at the same time detailing the unfelt interior in contention with what might be on the surface.</p>
+
+        <h3 style="font-style: italic;">paper one</h3> 
+
+        <p>For the first paper element, a singular dot is rotating in a circular fashion about the centre of the paper. I specified its x and y positions by utilising the sine and cosine functions.</p>
+
+        <p>On interaction with this piece, background dots are seen to appear and a thunder sound will be played. When the user’s mouse is out of the screen the sound will pause and the dots will be hidden. This was done with event listeners for mouse over and mouse out. The conceptual idea on how to move the background dots were based off a tutorial we had. 
+
+        <p>The idea of this piece is that the white dot can be seen clearly when it is rotating on it's own but it seems to disappear into the madness when the other dots surface.</p>
+
+
+        <h3 style="font-style: italic;">paper two</h3>
+
+        <p>For the second paper element, a pentagon appears on screen and when the user mouses over the paper, the centre of the pentagon will follow the mouse’s position on the screen. I learnt how to update paths by calling its attribute rather than redrawing a new path.</p>
+
+        <p>If I had more time I would want to have a 2D cube object with its centre rotating according to the mouse position.</p>
+
+        <h3 style="font-style: italic;">paper three</h3>
+
+        <p>For the third paper element, 2 dots appear to be circling each other. I did this by giving one of them an angle that was out of phase of the other by PI. This is why both dots are exactly 180 degrees from each other. </p>
+
+        <p>On mouse move, the 2 encircling dots, I called them yin and yang, will change colour. I did this by calling a random integer for their hue value. I gave the first dot a random integer between 0-180 and the second dot a random integer between 181-360. I gave them different hue values so that their colours will never be the same.</p>
+        
+        <p>On mouse-over by the user, an array of colour changing dots appear on the screen. I did this by going through a loop and giving the next dot a difference of 6 degrees from the previous dot. This gives a complete round of dots. To have more than 1 row of dots, I adjusted their x and y position such that it was getting "bigger" around the center. (With respect to the center point, I increased their distance from it, so the radius of the circle of dots will increase as well).</p>
+
+        <h3 style="font-style: italic;">paper four</h3>
+
+        <p>For the fourth paper element, a single switch appears on paper. When the user clicks on it, the circle moves to the right and the rectangle fills green. Also, fireworks are seen to be emitted and fall to the floor. A sound is also played. To control when the switch would be “on” or “off” I called a variable p4stat and used and if/else if statement to get the cases that I wanted for the appropriate function calls and position of the circle.</p>
+
+        <p>I wrote a function to "fire" the dots couple with gravity based off of a tutorial session we had in class. </p>
+
+        <h3 style="font-style: italic;">paper five</h3>
+
+        <p>For the fifth paper element, the user sees 8 circles rotating, and on mouse over on the canvas the colours of the circle changes to the colours of the rainbow. I initialised the 8 circles by making each out of phase with the one earlier by PI/4. I animated them by that same lag of PI/4. </p>
+
+        <p>I tried to ease the computational workload of the machine by letting the lag value equal to 0 once it had reached a full cycle and was equal to 2PI, even though it would have given the same result. (I assumed by computing sine of a large number would take up more power). I created 2 functions, change and changeBack, to change the colours of the circles on mouseover and to change the colours back to white on mouse out.</p>
+
+        <h3 style="font-style: italic;">paper six</h3>
+
+        <p>On paper six, the users sees a pair of eyes on screen. On mouse over, the eyes will follow the direction of the mouse. One of the pupils of the eyes is coloured blue. I initially did this as with eyes the same colour as the background, it was difficult to track it's position. I grew to like the mismatched eyes and so I did not change it back. Eyebrows were added so that it is easier to recognize that these are eyes. </p>
+
+        <p>To have the eyes remain in the circles of the eyeballs and yet still follow the direction of the mouse I used an if/else if case type thing. </p>
+
+        <p>I calculated the distance between the centre of the right eye and my mouse position and declared if this distance is less than or equal to the radius (40) the eyeball would be exactly the position of the mouse. If this distance is more than the radius of 40, I decided on the pupil’s position on another way. I calculated the x and y distances between my mouse position and the centre of the right eye. Then I imagined if there were an imaginary circle centered at the right eye, and my current mouse position is on its edge, what would that radius be? I calculated it by the circle formula x^2+y^2=r^2. Then I used this r and proportioned it out by 40. I used this proportion to rescale my x and y positions so that they do not exceed the radius of the eyeball. I used these new values to position my pupil.</p>
+
+        <p>I did the same for the left eye.</p>
+
+        <p>If I had more time, I would make sure the sounds play properly. The event listener I set up listens for the event and a sound would play. I think when I move my mouse too fast, the listener does not have enough time to play the sound and will not play the sound again, even if the new position is supposed to have a sound. The set up an if/else if case, to differentiate where the mouse position is at (on the right or on the left). I used the x position of the mouse and the middle line of the rectangle. I set up a status kind of tracker to check whenever the mouse value has changed sides (between right and left). If the mouse moved from right to left, a sound is played. If the mouse moves within the right side, no sound is played. This is the same for the left side as well.</p>
+
+        <h3 style="font-style: italic;">paper seven</h3>
+
+        <p>For the seventh paper, it shows clock with the time values: time and effort, haha. On mouse over, the clock ticks with a sound and the path is drawn to hit the next time value. I manually assigned the position of the words and assigned them to an array so that when I called my ticking function to tick the clock, the positions of each "time" can be accessed with ease.</p>
+
+        <p> If I were to re-code this I would have updated the path by using the attr-way instead of reassigning it a new path and hiding the old path.</p>
+
+        <h3 style="font-style: italic;">paper eight</h3>
+
+        <p>For the last paper (yes, finally!), I have a huge YES on-screen. On mouse-over, a NO comes up, and the YES starts to change it's fill colour. If I had more time, I would draw both these words as paths, instead of calling them as texts. I would light up the parts of the path that overlaps. </p>
+
+        <p>The idea of this piece is that while YES and NO appear separate and clear when they are close it is often difficult to differentiate one from the other.</p>
+
+        <br>
+
+        <p>If I had more time I would most definitely do a better weekly log haha. Overall, I am very pleased with how my project turned out and I hope you are too.</p>
+
+    </div>
+    <center><h2><p style="font-style: 100">***</p><h2></center>
+    <center><a href="#top">back to top</a></center>
+
+    <br><br><br><br>
+    <div style="padding:100px">
+
+        <h2 id="linkhere2" style="font-size: 40px;letter-spacing: 10px;">weekly logs</h2>
+
+        <h3 style="font-style: italic;">23rd October 2016</h3>
+
+        <p>I've decided to base my project on circular patterns. It would be something of a panel type thing, users will be able to scroll right until the end. It will consists of a few raphael papers lined up. and each will display a pattern.</p>
+
+        <h3 style="font-style: italic;">30th October 2016</h3>
+
+        <p>Further developement on the idea, the papers should contain translucent svg shapes and should be moving by themselves, as users mouse over the shapes should change in their direction of movement.</p>
+
+        <h3 style="font-style: italic;">6th November 2016</h3>
+
+        <p>tried unsuccessfully to add music. :-(</p>
+
+        <h3 style="font-style: italic;">13th November 2016</h3>
+
+        <p>project completed, with sound!</p>
+
+    </div>
+
+    <center><h2><p style="font-style: 100">***</p><h2></center>
+    <center><a href="#top">back to top</a></center>
+
+
+
+  </body>
+</html>
+

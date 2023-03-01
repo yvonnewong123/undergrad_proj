@@ -1,0 +1,98 @@
+html, body {  
+	height:100%;
+	width:110%;
+}
+
+body {
+   font: 24px Helvetica;
+   background-color: black;
+  }
+
+
+  #space {  
+   min-height: 70%;
+   max-height: 70%;
+   max-width: 50%;
+   min-width: 300%;
+   margin: 0px;
+   padding: 0px;
+   display:  flex;
+   flex-flow: row;
+   }
+
+   
+
+   #paper1,#paper2,#paper3,#paper4,#paper5,#paper6,#paper7,#paper8,#paper9{
+    margin-left: 20px;
+   }
+
+   #starttext{
+    order:0;
+   }
+
+   #paper1,#text1{
+    order:1;
+   }
+   #paper2{
+    order:2;
+   }
+   #paper3{
+    order:3;
+   }
+   #paper4{
+    order:4;
+   }
+   #paper5{
+    order:5;
+   }
+   #paper6{
+    order:6;
+   }
+   #paper7{
+    order:7;
+   }
+   #paper8{
+    order:8;
+   }
+   #paper9{
+    order:9;
+   }
+
+   #closetext{
+    order:10;
+   }
+
+   #starttext,#closetext{
+    margin-left: 30px;
+    margin-right: 30px;
+   }
+
+   .text{
+    color:white;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-style: italic;
+   }
+  
+
+   .container{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+   }
+
+   #paper1text1
+   {
+    font-size: 15px;
+    color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    min-width: 150px;
+   }
+
+   #closetext{
+    min-width: 350px;
+   }
+
+
+};
+
